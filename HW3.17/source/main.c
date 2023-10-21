@@ -8,39 +8,47 @@ int main(void)
 
 	while (1)
 	{
-		printf("Enter account number (1 to 100): ");
+		printf("Enter account number (-1 to end): ");
 		scanf("%d", &account);
 
-		printf("\nEnter beginning balance: ");
-		scanf("%f", &beginBalance);
-
-		printf("\nEnter total charges: ");
-		scanf("%f", &totalCharges);
-
-		printf("\nEnter total credits: ");
-		scanf("%f", &totalCredits);
-
-		printf("\nEnter credit limits: ");
-		scanf("%f", &creditLimits);
-
-		printf("\n");
-
-		if ((beginBalance + totalCharges - totalCredits)>creditLimits)
+		if (account ==  -1)
 		{
-			printf("\nAccount:\t%d", account);
-			printf("\nCredit limit:\t%.2f", creditLimits);
-			printf("\nBalance:\t%.2f", beginBalance + totalCharges - totalCredits);
-			printf("\nCredit Limits Exceeded.\n");
-			system("pause");
-			printf("\n");
+			break;
 		}
 		else
 		{
-			system("pause");
+			printf("\nEnter beginning balance: ");
+			scanf("%f", &beginBalance);
+
+			printf("\nEnter total charges: ");
+			scanf("%f", &totalCharges);
+
+			printf("\nEnter total credits: ");
+			scanf("%f", &totalCredits);
+
+			printf("\nEnter credit limits: ");
+			scanf("%f", &creditLimits);
+
 			printf("\n");
-			printf("\n");
-			continue;
+
+			if ((beginBalance + totalCharges - totalCredits) > creditLimits)
+			{
+				printf("\nAccount:\t%d", account);
+				printf("\nCredit limit:\t%.2f", creditLimits);
+				printf("\nBalance:\t%.2f", beginBalance + totalCharges - totalCredits);
+				printf("\nCredit Limits Exceeded.\n");
+				system("pause");
+				printf("\n");
+			}
+			else
+			{
+				system("pause");
+				printf("\n");
+				printf("\n");
+				continue;
+			}
 		}
+		
 	}
 	return 0;
 }
