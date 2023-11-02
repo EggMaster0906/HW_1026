@@ -6,7 +6,7 @@ int main(void)
 	float sales;
 	while (1)
 	{
-		printf("Enter sales in dolars (-1 to end): ");
+		printf("Enter sales in dolars (-1 to end): $");
 		scanf("%f", &sales);
 
 		if (sales == -1)
@@ -15,7 +15,7 @@ int main(void)
 		}
 		else
 		{
-			printf("Salary is: %.2f", sales*0.09 + 200);
+			printf("Salary is: US$%.2f", sales*0.09 + 200);
 			printf("\n\n");
 		}
 	}

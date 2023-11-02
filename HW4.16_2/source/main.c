@@ -3,11 +3,22 @@
 
 int main(void)
 {
-	int length = 30;
+	int length = 15;
+	
+	char title[][10] = { "(a)","(b)","(c)","(d)" };
+
+	for (int i = 0; i < 4; i++) 
+	{
+		printf("%s", &title[i]);
+		for (int j = 1; j <= length-3; j++)
+			printf(" ");
+		printf("\t");
+	}
+	
+	printf("\n");
 
 	for (int i = 1; i <= length; i++)
 	{
-
 		//Triangle (a)
 		for (int a1 = 1; a1 <= i; a1++)
 		{

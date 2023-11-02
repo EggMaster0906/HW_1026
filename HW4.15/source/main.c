@@ -9,7 +9,7 @@ int main(void)
 	for (int i = 1; i <= 5; i++)
 		form[i][0] = 5000;
 
-	printf("An investment calculation of $5,000: \n");
+	printf("An investment calculation of $%.0f: \n", form[1][0]);
 
 	printf("\nInterestRate\t");
 	printf("%-15s\t", "10.0%");

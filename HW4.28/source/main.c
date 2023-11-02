@@ -53,7 +53,8 @@ int main(void)
 			break;
 		}
 
-		printf("Salary of a week is: US$%.0f\n\n", salary[paycode]);
+		printf("\nSalary of a week is: US$%.0f\n\n", salary[paycode]);
+		system("pause");
 	}
 
 	return 0;
